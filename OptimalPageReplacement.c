@@ -79,7 +79,12 @@ int main()
             frame[pos] = pages[i];
             page_fault++;
         }
+        printf("\n");
+        for(int j = 0; j < nf; j++){
+            printf("%d\t", frame[j]);
+        }
     }
-    printf("Total page fault : %d", page_fault);
+    printf("\nTotal page fault : %d", page_fault);
+     printf("\nTotal Hits : %d", n-page_fault);
     return 0;
 }
